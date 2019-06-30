@@ -3,7 +3,7 @@
 package hr.vpriscan.kost
 
 @DslMarker
-annotation class KsonMarker
+annotation class KostMarker
 
 object Kost {
 
@@ -18,13 +18,13 @@ object Kost {
     }
 }
 
-@KsonMarker
+@KostMarker
 class KostArray : ArrayList<Any?>() {
 
     object ElementHook
 
     @Suppress("PropertyName")
-    val _a get() = ElementHook
+    val a get() = ElementHook
 
     operator fun ElementHook.minus(value: Any?) {
         this@KostArray.add(value)
@@ -43,7 +43,7 @@ class KostArray : ArrayList<Any?>() {
     }
 }
 
-@KsonMarker
+@KostMarker
 class KostObject : LinkedHashMap<String, Any?>() {
 
     operator fun String.minus(value: Any?) {

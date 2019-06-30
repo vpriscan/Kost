@@ -1,3 +1,8 @@
+
+[![](https://jitpack.io/v/vpriscan/Kost.svg)](https://jitpack.io/#vpriscan/Kost)
+
+
+#### Example
 Kost DSL example:
 ```kotlin
 val dogsKost = Kost { // root object builder
@@ -99,4 +104,42 @@ Resulting JSON example:
     }
   ]
 }
+```
+
+#### Add dependency
+Kost is available on Jitpack.
+
+##### Gradle
+
+Add Jitpack repository:
+```groovy
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+```
+
+Add Kost dependency:
+```groovy
+implementation("com.github.vpriscan:Kost:1.0.0")
+```
+
+##### Maven
+
+Add Jitpack repository:
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+
+Add Kost dependency:
+```xml
+<dependency>
+    <groupId>com.github.vpriscan</groupId>
+    <artifactId>Kost</artifactId>
+    <version>1.0.0</version>
+</dependency>
 ```
